@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "crypto/merkle",
+    "crypto/signatures",
+    "node/node-core",
+    "node/p2p",
+    "node/storage",
+    "node/api",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Crypto_Coin Team <core@crypto-coin.io>"]
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+

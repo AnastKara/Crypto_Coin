@@ -1,0 +1,23 @@
+[package]
+name = "crypto-coin-node-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core node runtime for Crypto_Coin blockchain"
+authors = ["Crypto_Coin Team <core@crypto-coin.io>"]
+license = "MIT"
+repository = "https://github.com/crypto-coin/node-core"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+env_logger = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+

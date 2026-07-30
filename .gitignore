@@ -1,0 +1,44 @@
+# Rust
+target/
+Cargo.lock
+
+# Haskell
+.cabal-sandbox/
+cabal.sandbox.config/
+dist/
+dist-newstyle/
+.stack-work/
+*.hi
+*.o
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+
+# Data
+data/
+*.db
+*.log
+
+# Environment
+.env
+.env.local
+

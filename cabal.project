@@ -1,0 +1,16 @@
+packages:
+  formal-protocol/crypto-coin-protocol/
+  formal-protocol/crypto-coin-consensus/
+  formal-protocol/crypto-coin-crypto/
+
+tests: True
+
+package crypto-coin-protocol
+  ghc-options: -Wall -O2
+
+package crypto-coin-consensus
+  ghc-options: -Wall -O2
+
+package crypto-coin-crypto
+  ghc-options: -Wall -O2
+
