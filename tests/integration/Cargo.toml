@@ -1,0 +1,16 @@
+[package]
+name = "crypto-coin-integration-tests"
+version = "0.1.0"
+edition = "2021"
+description = "Multi-node integration tests for Crypto_Coin blockchain"
+authors = ["Crypto_Coin Team <core@crypto-coin.io>"]
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+
+[[test]]
+name = "integration"
+path = "mod.rs"
+

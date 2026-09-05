@@ -1,0 +1,23 @@
+# Crypto_Coin Rust Build Configuration
+# Uses MinGW-w64 (UCRT64) linker for Windows GNU target
+
+[target.x86_64-pc-windows-gnu]
+linker = "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+ar = "C:\\msys64\\ucrt64\\bin\\ar.exe"
+
+[target.x86_64-pc-windows-msvc]
+linker = "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+ar = "C:\\msys64\\ucrt64\\bin\\ar.exe"
+
+[build]
+target = "x86_64-pc-windows-gnu"
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

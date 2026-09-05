@@ -8,6 +8,7 @@ members = [
     "node/p2p",
     "node/storage",
     "node/api",
+    "tests/integration",
 ]
 
 [workspace.package]
